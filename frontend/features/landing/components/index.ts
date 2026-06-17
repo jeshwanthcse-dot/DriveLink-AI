@@ -1,0 +1,9 @@
+export { HeroSection } from "./hero-section";
+export { StatisticsSection } from "./statistics-section";
+export { FeaturesSection } from "./features-section";
+export { HowItWorksSection } from "./how-it-works-section";
+export { AiMatchingSection } from "./ai-matching-section";
+export { LiveTrackingSection } from "./live-tracking-section";
+export { OfflineSyncSection } from "./offline-sync-section";
+export { BenefitsSection } from "./benefits-section";
+export { CtaSection } from "./cta-section";
