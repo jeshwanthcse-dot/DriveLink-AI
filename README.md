@@ -10,7 +10,7 @@ AI-powered Driver Exchange & Logistics Marketplace connecting transport organiza
 | Backend | Python 3.12+, FastAPI, Pydantic, SQLAlchemy |
 | Database | Supabase PostgreSQL |
 | AI | Gemini API |
-| Maps | Google Maps API |
+| Maps | MapLibre GL JS, OpenStreetMap, OpenRouteService, OSRM |
 | Notifications | Firebase Cloud Messaging |
 
 ## Project Structure
@@ -25,9 +25,31 @@ DriveLink-AI/
 └── PROJECT_RULES.md
 ```
 
+## Maps Setup & Configuration
+
+This project is migrated completely from Google Maps to an open-source map stack:
+- **Frontend Maps**: MapLibre GL JS
+- **Tile Provider**: OpenStreetMap (via CartoDB Positron/Dark Matter raster tiles)
+- **Routing Engine**: OpenRouteService (primary) with automatic fallback to **OSRM Public API** (no key required)
+- **Geocoder**: OpenStreetMap Nominatim API (Forward/Reverse Address Lookups)
+
+### Installation
+Ensure `maplibre-gl` is installed in the Next.js frontend project:
+```bash
+cd frontend
+npm install maplibre-gl
+```
+
+### Environment Variables
+Configure the map provider key in the backend `.env`:
+```env
+OPENROUTE_API_KEY=your_openroute_api_key_here
+```
+*Note: If `OPENROUTE_API_KEY` is empty or omitted, the backend will automatically fall back to OSRM Public Routing API.*
+
 ## Getting Started
 
-> Sprint 0 — scaffolding only. Dependencies are not installed yet.
+> Sprint 16 completed.
 
 ### Frontend
 
@@ -54,3 +76,4 @@ See [PROJECT_RULES.md](./PROJECT_RULES.md) for coding standards, module definiti
 ## License
 
 MIT — see [LICENSE](./LICENSE).
+

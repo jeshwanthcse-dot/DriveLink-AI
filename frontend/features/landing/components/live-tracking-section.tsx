@@ -29,7 +29,7 @@ export function LiveTrackingSection() {
             badge="Live Tracking"
             title="See every mile,"
             highlight="in real time"
-            description="Google Maps-powered tracking gives organizations full visibility — from pickup through final drop-off."
+            description="Open-source real-time maps give organizations full visibility — from pickup through final drop-off."
             align="left"
           />
 

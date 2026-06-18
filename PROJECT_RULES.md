@@ -497,3 +497,33 @@ Always maintain separation of frontend and backend.
 Generate enterprise-quality production code.
 
 Think like a Senior Software Architect before generating any code.
+Runtime Verification Policy
+
+The AI assistant must NEVER execute runtime verification automatically.
+
+Do NOT run:
+
+* uvicorn
+* pytest
+* ruff
+* black
+* mypy
+* alembic
+* npm
+* docker
+* lint
+* build
+* type-check
+
+Do NOT claim that:
+
+* imports are verified
+* the server starts successfully
+* tests passed
+* compilation succeeded
+
+unless those outputs are explicitly provided by the user.
+
+Generate code only.
+
+Return a manual testing checklist and STOP.

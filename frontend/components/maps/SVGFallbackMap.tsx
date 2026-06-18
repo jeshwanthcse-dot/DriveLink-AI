@@ -2,7 +2,7 @@
 
 /**
  * components/maps/SVGFallbackMap.tsx
- * Animated SVG map — primary map when no Google Maps API key is available.
+ * Animated SVG map — primary fallback map when mapping services are unconfigured.
  * Shows driver marker moving smoothly, route polyline, pickup/drop pins.
  * Sprint 7 — DriveLink AI
  */
